@@ -16,6 +16,18 @@ Ext.define('ContactList.view.Navi', {
                 itemId: 'addButton',
                 hidden: false,
                 align: 'right'
+            }, {
+                xtype: 'button',
+                text: '編集',
+                itemId: 'editButton',
+                hidden: true,
+                align: 'right'
+            }, {
+                xtype: 'button',
+                text: '保存',
+                itemId: 'saveButton',
+                hidden: true,
+                align: 'right'
             }]
         },
 

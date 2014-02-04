@@ -19,7 +19,8 @@ Ext.application({
 
     controllers: [
         'List',
-        'Navi'
+        'Navi',
+        'Detail'
     ],
 
     views: [
