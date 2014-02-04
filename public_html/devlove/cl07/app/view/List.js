@@ -4,7 +4,8 @@ Ext.define('ContactList.view.List', {
     xtype: 'contactlist',
 
     requires: [
-        'ContactList.store.Contacts'
+        'ContactList.store.Contacts',
+        'Ext.plugin.ListPaging'
     ],
 
     config: {
