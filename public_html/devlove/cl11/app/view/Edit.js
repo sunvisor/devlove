@@ -14,12 +14,20 @@ Ext.define('ContactList.view.Edit', {
             xtype: 'fieldset',
             items: [{
                 xtype: 'textfield',
-                label: '氏名',
-                name: 'name'
+                label: '姓',
+                name: 'last_name'
             }, {
                 xtype: 'textfield',
-                label: 'ふりがな',
-                name: 'name_kana'
+                label: '名',
+                name: 'first_name'
+            }, {
+                xtype: 'textfield',
+                label: 'セイ',
+                name: 'last_kana'
+            }, {
+                xtype: 'textfield',
+                label: 'メイ',
+                name: 'first_kana'
             }]
         }, {
             xtype: 'fieldset',
@@ -83,4 +91,3 @@ Ext.define('ContactList.view.Edit', {
         }]
     }
 });
-

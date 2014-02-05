@@ -1,6 +1,10 @@
 Ext.define('ContactList.controller.List', {
     extend: 'Ext.app.Controller',
 
+    requires: [
+        'ContactList.view.Detail'
+    ],
+
     config: {
         refs: {
             navi: 'contactnavi'

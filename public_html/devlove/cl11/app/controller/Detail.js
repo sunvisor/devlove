@@ -1,16 +1,21 @@
 Ext.define('ContactList.controller.Detail', {
     extend: 'Ext.app.Controller',
 
+    requires: [
+        'ContactList.view.Edit'
+    ],
+
     config: {
         refs: {
+            //navi: 'contactnavi',
             detail: 'contactdetail',
             editButton: 'button#editButton'
         },
         control: {
             detail : {
                 show: 'onShow',
-                hide: 'onHide'
-            }
+                hide: 'onHide',
+            },
         }
     },
 
@@ -20,11 +25,20 @@ Ext.define('ContactList.controller.Detail', {
     },
 
     onShow: function() {
-        me.getEditButton().show();
+        this.getEditButton().show();
     },
 
     onHide: function () {
         this.getEditButton().hide();
-    }
+    },
+
+    /*editData: function() {
+        var me = this,
+            record = me.getDetail().getRecord(),
+            edit = Ext.create('ContactList.view.Edit');
+
+        edit.setRecord(record);
+        me.getNavi().push(edit);
+    }*/
 
 });

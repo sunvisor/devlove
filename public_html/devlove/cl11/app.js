@@ -20,7 +20,8 @@ Ext.application({
     controllers: [
         'List',
         'Navi',
-        'Detail'
+        'Detail',
+        'Edit'
     ],
 
     views: [
