@@ -13,6 +13,7 @@ Ext.define('ContactList.controller.Navi', {
             addButton: 'button#addButton',
             editButton: 'button#editButton',
             saveButton: 'button#saveButton'
+
         },
         control: {
             addButton: {
@@ -57,10 +58,25 @@ Ext.define('ContactList.controller.Navi', {
             data = edit.getValues(),
             store = Ext.getStore('Contacts');
 
-        record.set(data);
-        if( record.phantom ) {
-            store.add(record);
-        }
+        edit.submit({
+            url: '../../saveperson.php',
+            method: 'post',
+            waitMsg: {
+                xtype: 'loadmask',
+                message: '送信中です'
+            },
+
+            success: function(form, ret) {
+                if( record.phantom ) {
+                    store.add(record);
+                    store.load();
+                }
+                record.set(ret.data);
+            },
+            failure: function(form, ret) {
+                Ext.Msg.alert(ret.error);
+            }
+        });
         me.getNavi().pop();
     }
 });
