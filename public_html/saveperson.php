@@ -10,12 +10,18 @@ header('Access-Control-Allow-Headers:x-requested-with');
 
 $id = $_POST['id'];
 
+if( $_POST['birthday'] ) {
+    $bd = date('Y-m-d', strtotime($_POST['birthday']));
+} else {
+    $bd = null;
+}
+
 $rec = array(
     'last_name' => $_POST['last_name'],
     'first_name' => $_POST['first_name'],
     'last_kana' => $_POST['last_kana'],
     'first_kana' => $_POST['first_kana'],
-    'birthday' => $_POST['birthday'],
+    'birthday' => $bd,
     'gender' => $_POST['gender'],
     'email' => $_POST['email'],
     'phone' => $_POST['phone'],

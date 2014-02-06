@@ -5,8 +5,7 @@ Ext.define('ContactList.view.List', {
 
     requires: [
         'ContactList.store.Contacts',
-        'Ext.plugin.ListPaging',
-        'Ext.plugin.PullRefresh'
+        'Ext.plugin.ListPaging'
     ],
 
     config: {
@@ -17,8 +16,6 @@ Ext.define('ContactList.view.List', {
         plugins: [{
             xclass: 'Ext.plugin.ListPaging',
             autoPaging: true
-        },{
-            xclass: 'Ext.plugin.PullRefresh'
         }],
         onItemDisclosure: true,
         disableSelection: true

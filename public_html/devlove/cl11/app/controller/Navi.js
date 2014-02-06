@@ -35,10 +35,10 @@ Ext.define('ContactList.controller.Navi', {
     onTapAddButton: function() {
         var me = this,
             record = Ext.create('ContactList.model.Contact'),
-            form = Ext.create('ContactList.view.Edit');
+            edit = Ext.create('ContactList.view.Edit');
 
-        form.setRecord(record);
-        me.getNavi().push(form);
+        edit.setRecord(record);
+        me.getNavi().push(edit);
     },
 
     onTapEditButton: function() {

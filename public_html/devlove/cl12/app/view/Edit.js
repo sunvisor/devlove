@@ -13,9 +13,6 @@ Ext.define('ContactList.view.Edit', {
         items: [{
             xtype: 'fieldset',
             items: [{
-                xtype: 'hiddenfield',
-                name: 'id'
-            }, {
                 xtype: 'textfield',
                 label: '姓',
                 name: 'last_name'
