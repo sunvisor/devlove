@@ -9,7 +9,7 @@ Ext.define('ContactList.store.Contacts', {
         sorters: ['last_kana', 'first_kana'],
         remoteSort: true,
         grouper: {
-            property: 'initial',
+            property: 'initial'
         }
-    },
+    }
 });

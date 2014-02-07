@@ -10,10 +10,7 @@ Ext.define('ContactList.controller.Edit', {
             edit: {
                 show: 'onShow',
                 hide: 'onHide'
-            },
-            /*saveButton: {
-                tap: 'onSaveData'
-            }*/
+            }
         }
     },
 

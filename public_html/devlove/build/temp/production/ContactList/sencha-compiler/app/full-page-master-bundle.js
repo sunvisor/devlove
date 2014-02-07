@@ -1,2 +1,2 @@
 // @tag full-page
-// @require /Users/sunvisor/devsites/devlove/public_html/devlove/cl03/app.js
+// @require /Users/sunvisor/gitrep/devlove/public_html/devlove/cl15/app.js
