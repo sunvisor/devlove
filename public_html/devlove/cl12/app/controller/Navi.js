@@ -58,7 +58,8 @@ Ext.define('ContactList.controller.Navi', {
             store = Ext.getStore('Contacts');
 
         edit.submit({
-            url: '../../saveperson.php',
+            //url: '../../saveperson.php',
+            url: 'http://sencha.sunvisor.net/saveperson.php',
             method: 'post',
             params: {
                 id: record.get('id')
@@ -77,7 +78,7 @@ Ext.define('ContactList.controller.Navi', {
                 me.getNavi().pop();
             },
             failure: function(form, ret) {
-                Ext.Msg.alert(ret.error);
+                Ext.Msg.alert('エラーが発生しました', ret.error);
                 me.getNavi().pop();
             }
         });
